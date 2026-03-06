@@ -32,7 +32,7 @@
         padding-right: 20px;
       }
       .site-header {
-        padding: 16px 0;
+        padding: 8px 0;
       }
       .site-header .container {
         display: flex;
@@ -47,13 +47,28 @@
         color: inherit;
       }
       .site-header .brand img {
-        height: 36px;
+        height: 48px;
         object-fit: contain;
       }
-      .site-header .brand-name {
+      .logo-icon {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+      }
+      .logo-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+      .logo-text .product {
         font-size: 16px;
         font-weight: 700;
         color: #111;
+      }
+      .logo-text .company {
+        font-size: 12px;
+        color: #777;
       }
       .hero {
         position: relative;
@@ -158,13 +173,14 @@
         align-items: center;
         gap: 16px;
       }
-      .platform-icons svg {
-        width: 28px;
-        height: 28px;
-        opacity: 0.75;
+      .platform-icons img {
+        height: 24px;
+        width: 24px;
+        object-fit: contain;
+        opacity: 0.8;
         transition: opacity 0.2s;
       }
-      .platform-icons svg:hover {
+      .platform-icons img:hover {
         opacity: 1;
       }
       .hero-visual {
@@ -491,8 +507,13 @@
     <header class="site-header">
       <div class="container">
         <a href="index.html" class="brand">
-          <img src="./assets/logo.png" alt="Kaizen Paint Logo" />
-          <span class="brand-name">Kaizen Paint</span>
+          <div class="logo-icon">
+            <img src="./assets/logo.png" alt="Kaizen Paint Logo" />
+          </div>
+          <div class="logo-text">
+            <div class="product">Mr. K's Chatbot</div>
+            <div class="company">Kaizen Paint</div>
+          </div>
         </a>
       </div>
     </header>
@@ -501,7 +522,7 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-badge">Active &amp; Available</div>
-          <h1>Meet Mr. K — Your HR Policy Assistant</h1>
+          <h1>Meet Mr. K's Chatbot — Your HR Policy Assistant</h1>
           <p class="hero-desc">
             Get instant, AI-powered answers about company policies, leave rules,
             benefits, and guidelines — directly inside Microsoft Teams. Built
@@ -510,75 +531,21 @@
           <div class="hero-platforms">
             <span>Available on</span>
             <div class="platform-icons">
-              <svg
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <img
+                src="https://img.icons8.com/fluency/96/microsoft-teams-2019.png"
+                alt="Microsoft Teams"
                 title="Microsoft Teams"
-              >
-                <path
-                  d="M20.625 8.5h-3.75c-.345 0-.625.28-.625.625V14a2.5 2.5 0 0 1-2.5 2.5h-3.5v1.125c0 .76.616 1.375 1.375 1.375h4.55l2.3 1.95a.5.5 0 0 0 .838-.369V19h.687c.76 0 1.375-.616 1.375-1.375v-7.75c0-.76-.616-1.375-1.375-1.375z"
-                  fill="#5059C9"
-                />
-                <circle cx="19.5" cy="5.5" r="2" fill="#5059C9" />
-                <path
-                  d="M14.5 7h-8c-.76 0-1.375.616-1.375 1.375v7.75a4.375 4.375 0 0 0 4.375 4.375 4.375 4.375 0 0 0 4.375-4.375v-7.75C13.875 7.616 13.26 7 12.5 7z"
-                  fill="#7B83EB"
-                />
-                <circle cx="10.5" cy="4" r="2.5" fill="#7B83EB" />
-                <path
-                  d="M12.875 7H5.25v9.125a4.375 4.375 0 0 0 3.98 4.358A4.375 4.375 0 0 0 13.875 16.125V8.375C13.875 7.616 13.26 7 12.5 7z"
-                  fill="rgba(0,0,0,0.1)"
-                />
-              </svg>
-              <svg
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              />
+              <img
+                src="https://img.icons8.com/fluency/96/microsoft-outlook-2019.png"
+                alt="Microsoft Outlook"
                 title="Microsoft Outlook"
-              >
-                <path
-                  d="M22 7.5V17a1.5 1.5 0 0 1-1.5 1.5H13v-12h7.5A1.5 1.5 0 0 1 22 7.5z"
-                  fill="#1490DF"
-                />
-                <path
-                  d="M22 7.5l-5 3.75L13 7.5"
-                  fill="none"
-                  stroke="#fff"
-                  stroke-width=".75"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <rect
-                  x="2"
-                  y="5"
-                  width="12"
-                  height="14"
-                  rx="1.5"
-                  fill="#0078D4"
-                />
-                <ellipse
-                  cx="8"
-                  cy="12"
-                  rx="3.5"
-                  ry="3"
-                  fill="none"
-                  stroke="#fff"
-                  stroke-width="1.2"
-                />
-              </svg>
-              <svg
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                title="Powered by Azure AI"
-              >
-                <path
-                  d="M13.05 4.24L6.56 18.05a.5.5 0 0 0 .44.75h7.8a.5.5 0 0 0 .44-.26l5.06-9.78a.5.5 0 0 0-.01-.48L15.85 1.2a.5.5 0 0 0-.9.02z"
-                  fill="#0089D6"
-                />
-                <path
-                  d="M8.85 14.85L11 10.5 7.5 4.7a.5.5 0 0 0-.87 0l-3.1 5.98a.5.5 0 0 0 0 .48l4.4 8.54h4.93z"
-                  fill="#0078D4"
-                />
-              </svg>
+              />
+              <img
+                src="https://img.icons8.com/fluency/96/microsoft-365.png"
+                alt="Microsoft 365"
+                title="Microsoft 365"
+              />
             </div>
           </div>
         </div>
@@ -631,32 +598,11 @@
       </div>
     </section>
 
-    <section class="trust-bar">
-      <div class="container">
-        <div class="trust-item">
-          <span class="trust-icon">&#128274;</span>
-          Secure &amp; Authenticated
-        </div>
-        <div class="trust-item">
-          <span class="trust-icon">&#9889;</span>
-          Powered by Azure AI
-        </div>
-        <div class="trust-item">
-          <span class="trust-icon">&#128203;</span>
-          Grounded in Official Documents
-        </div>
-        <div class="trust-item">
-          <span class="trust-icon">&#127970;</span>
-          Internal Use Only
-        </div>
-      </div>
-    </section>
-
     <section class="features">
       <div class="container">
-        <h2>What Mr. K Can Help With</h2>
+        <h2>What Mr. K's Chatbot Can Help With</h2>
         <p class="section-sub">
-          Accurate answers sourced directly from official Kaizen Paint documents
+          Everything you need to know about company policies
         </p>
         <div class="features-grid">
           <div class="feature-card">
@@ -676,11 +622,11 @@
             </p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon purple">&#128187;</div>
-            <h3>Microsoft Teams</h3>
+            <div class="feature-icon purple">&#128663;</div>
+            <h3>Company Entitlements</h3>
             <p>
-              Access Mr. K directly within Microsoft Teams — no extra apps or
-              logins required.
+              Get details on car policies, travel allowances, insurance
+              coverage, and other employee entitlements.
             </p>
           </div>
         </div>
@@ -692,14 +638,9 @@
         <h2>Built for Kaizen Paint Employees</h2>
         <p>
           Mr. K's Chatbot is an internal AI assistant exclusively for Kaizen
-          Paint employees. It uses Azure AI to provide grounded, document-based
-          answers from your company's official HR resources.
+          Paint employees.
         </p>
-        <p>
-          Access is authenticated through your organization's Microsoft account
-          (kpme.com). Simply open Microsoft Teams and start a conversation with
-          Mr. K.
-        </p>
+        <p>Simply open Microsoft Teams and start a conversation with Mr. K.</p>
         <div class="note">
           This chatbot is for informational purposes only. Always refer to
           official HR communications for authoritative guidance.
