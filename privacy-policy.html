@@ -25,6 +25,28 @@
         -ms-user-select: none;
         user-select: none;
         -webkit-touch-callout: none;
+        position: relative;
+      }
+      .watermark {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        pointer-events: none;
+        opacity: 0.12;
+        z-index: 0;
+      }
+      .watermark img {
+        width: clamp(600px, 100vw, 700px);
+        height: clamp(600px, 100vw, 700px);
+        object-fit: contain;
+        filter: grayscale(1);
+      }
+      body > :not(.watermark) {
+        position: relative;
+        z-index: 1;
       }
       header {
         display: flex;
@@ -139,6 +161,9 @@
     </style>
   </head>
   <body>
+    <div class="watermark" aria-hidden="true">
+      <img src="./assets/logo.png" alt="" />
+    </div>
     <header>
       <a
         href="index.html"
@@ -162,7 +187,7 @@
 
     <h1>Privacy Policy</h1>
     <p class="page-meta">
-      Effective Date: March 04, 2026 &nbsp;|&nbsp; Version 1.0
+      Last Modified: March 09, 2026 &nbsp;|&nbsp; Version 1.0
     </p>
 
     <h2>1. Introduction</h2>
@@ -170,7 +195,7 @@
       This Privacy Policy describes how Mr. K's Chatbot, owned and operated by
       Kaizen Paint, handles information in connection with its use by Kaizen
       Paint employees. The Chatbot is an internal tool accessible only to
-      authorized Kaizen Paint employees who hold an active @kpme.com email
+      authorized Kaizen Paint employees who hold an active kpme.com email
       account registered on official Kaizen Paint platforms such as Microsoft
       Teams and Outlook.
     </p>
@@ -179,7 +204,7 @@
     <p>
       Mr. K's Chatbot is strictly for internal use within Kaizen Paint. Access
       is limited to employees authenticated through their official Kaizen Paint
-      Microsoft account. Only users with a valid @kpme.com email address
+      Microsoft account. Only users with a valid kpme.com email address
       registered in the organization's Microsoft environment (Teams, Outlook,
       etc.) are permitted to use this Chatbot. Unauthorized users cannot access
       the Chatbot.
