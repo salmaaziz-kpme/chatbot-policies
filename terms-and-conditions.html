@@ -25,6 +25,28 @@
         -ms-user-select: none;
         user-select: none;
         -webkit-touch-callout: none;
+        position: relative;
+      }
+      .watermark {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        pointer-events: none;
+        opacity: 0.12;
+        z-index: 0;
+      }
+      .watermark img {
+        width: clamp(600px, 100vw, 700px);
+        height: clamp(600px, 100vw, 700px);
+        object-fit: contain;
+        filter: grayscale(1);
+      }
+      body > :not(.watermark) {
+        position: relative;
+        z-index: 1;
       }
       header {
         display: flex;
@@ -148,6 +170,9 @@
     </style>
   </head>
   <body>
+    <div class="watermark" aria-hidden="true">
+      <img src="./assets/logo.png" alt="" />
+    </div>
     <header>
       <a
         href="index.html"
@@ -171,7 +196,7 @@
 
     <h1>Terms &amp; Conditions</h1>
     <p class="page-meta">
-      Effective Date: March 04, 2026 &nbsp;|&nbsp; Version 1.0
+      Last Modified: March 09, 2026 &nbsp;|&nbsp; Version 1.0
     </p>
 
     <h2>1. Acceptance of Terms</h2>
@@ -186,7 +211,7 @@
     <h2>2. Authorized Access</h2>
     <p>
       Mr. K's Chatbot is an internal tool available exclusively to Kaizen Paint
-      employees who hold an active @kpme.com email account registered in the
+      employees who hold an active kpme.com email account registered in the
       organization's Microsoft environment. Access is authenticated through
       Microsoft's identity platform (Teams, Outlook, etc.). Use of the Chatbot
       by unauthorized individuals is strictly prohibited.
@@ -272,7 +297,7 @@
     <h2>9. Termination of Access</h2>
     <p>
       Access to the Chatbot is tied to your active employment and authorized
-      @kpme.com account at Kaizen Paint. Kaizen Paint may suspend or revoke
+      kpme.com account at Kaizen Paint. Kaizen Paint may suspend or revoke
       Chatbot access at any time, including in cases of misuse, policy
       violations, or if the user's employment with Kaizen Paint ends.
     </p>
